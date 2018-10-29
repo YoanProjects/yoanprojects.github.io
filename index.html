@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача ZINE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        h1 {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        h4 {
+            margin-top: 18px;
+        }
+
+        body {
+            padding-top: 25px;
+        }
+
+        form {
+            padding-bottom: 35px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .pages {
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+        }
+
+        @media (min-width: 992px) {
+            #search-field {
+                min-width: 300px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #search-field {
+                width: 100%;
+                margin-bottom: 14px;
+            }
+        }
+
+        .page-item {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>Търсене на думи</h1>
+    <form class="form-inline"><input class="form-control" type="text" placeholder="Въведете символи" id="search-field">
+        <div class="form-check ml-md-3">
+            <label class="form-check-label"><input id="reversed" class="form-check-input" type="checkbox"> Обратен
+                ред</label>
+        </div>
+        <div class="form-check ml-sm-3">
+            <label class="form-check-label"><input id="onlyLongWords" class="form-check-input" type="checkbox"> Само
+                дълги думи</label>
+        </div>
+    </form>
+    <div id="wordsCount">
+    </div>
+    <ul id="foundWords">
+    </ul>
+    <nav class="pages">
+        <ul class="pagination">
+            <li class="page-item previous"><a class="page-link"><span>«</span></a></li>
+            <li class="page-item next"><a class="page-link"><span>»</span></a></li>
+        </ul>
+    </nav>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<script src="wordListing.js"></script>
+</body>
+
+</html>
