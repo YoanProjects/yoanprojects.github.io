@@ -81,7 +81,7 @@ $(() => {
             wordsCountDisplay.text('(' + foundWords.length + ')');
 
             let results = $('<h4>');
-            results.text('Резултати ');
+            results.text('Results ');
             results.append(wordsCountDisplay);
 
             wordCountContainer.append(results);
